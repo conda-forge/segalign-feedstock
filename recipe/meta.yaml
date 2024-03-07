@@ -18,7 +18,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [cuda_compiler_version is undefined or cuda_compiler_version == "None"]
+  skip: true  # win or [cuda_compiler_version is undefined or cuda_compiler_version == "None"]
 
 requirements:
   build:
@@ -33,7 +33,10 @@ requirements:
     - tbb-devel {{ tbb_version }}
     - zlib
   run:
+    - coreutils
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version != "None"]
+    - grep
+    - sed
     - tbb-devel {{ tbb_version }}
 
 test:
