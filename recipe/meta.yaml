@@ -33,10 +33,7 @@ requirements:
     - tbb-devel {{ tbb_version }}
     - zlib
   run:
-    - coreutils
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version != "None"]
-    - grep
-    - sed
     - tbb-devel {{ tbb_version }}
 
 test:
