@@ -17,8 +17,8 @@ source:
     - patches/src__seed_filter.cu.patch
 
 build:
-  number: 0
-  skip: true  # [cuda_compiler_version is undefined or cuda_compiler_version == "None"]
+  number: 1
+  skip: True  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
 
 requirements:
   build:
@@ -33,8 +33,10 @@ requirements:
     - tbb-devel {{ tbb_version }}
     - zlib
   run:
+    - coreutils
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version != "None"]
-    - parallel
+    - grep
+    - sed
     - tbb-devel {{ tbb_version }}
 
 test:
