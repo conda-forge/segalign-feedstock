@@ -1,5 +1,5 @@
 {% set name = "SegAlign" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.3-alpha" %}
 {% set tbb_version = '2020.2.*' %}
 
 package:
@@ -7,14 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/gsneha26/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4f1892d0a08acf98b40608a2938cab984c225362df7a4c28c8347f2f38071abb
-  patches:
-    - patches/d1a73a0c9169d5517c9316d9bdc68fd52f63e885.patch
-    - patches/CMakeLists.txt.patch
-    - patches/common__seed_pos_table.cu.patch
-    - patches/repeat_masker_src__seed_filter.cu.patch
-    - patches/src__seed_filter.cu.patch
+  url: https://github.com/richard-burhans/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 2aea8131c939d8a4f1c11b40eed2c622d58858b2c5b656ec15e1f82f2a6786cc
 
 build:
   number: 2
