@@ -12,32 +12,22 @@ if [ "${cuda_compiler_version}" != "None" ]; then
     cuda_compiler_version_int=$(version2int "$cuda_compiler_version") 
 
     ARCHES=()
-    if   [ $cuda_compiler_version_int -eq $(version2int "11.0") ]; then
-        ARCHES=(35    50    53 60 61 62 70 72 75)
-    elif [ $cuda_compiler_version_int -eq $(version2int "11.1") ]; then
-        ARCHES=(35    50    53 60 61 62 70 72 75)
-    elif [ $cuda_compiler_version_int -eq $(version2int "11.2") ]; then
-        ARCHES=(35    50    53 60 61 62 70 72 75 80 86)
-    elif [ $cuda_compiler_version_int -eq $(version2int "11.3") ]; then
-        ARCHES=(35    50    53 60 61 62 70 72 75 80 86)
-    elif [ $cuda_compiler_version_int -eq $(version2int "11.4") ]; then
-        ARCHES=(35    50    53 60 61 62 70 72 75 80 86)
-    elif [ $cuda_compiler_version_int -eq $(version2int "11.5") ]; then
-        ARCHES=(35 37 50 52 53 60 61 62 70 72 75 80 86 87)
-    elif [ $cuda_compiler_version_int -eq $(version2int "11.6") ]; then
-        ARCHES=(35 37 50 52 53 60 61 62 70 72 75 80 86 87)
-    elif [ $cuda_compiler_version_int -eq $(version2int "11.7") ]; then
-        ARCHES=(35 37 50 52 53 60 61 62 70 72 75 80 86 87)
-    elif [ $cuda_compiler_version_int -eq $(version2int "11.8") ]; then
-        ARCHES=(35 37 50 52 53 60 61 62 70 72 75 80 86 87 89 90)
-    elif [ $cuda_compiler_version_int -eq $(version2int "12.0") ]; then
-        ARCHES=(      50 52 53 60 61 62 70 72 75 80 86 87 89 90 90a)
-    elif [ $cuda_compiler_version_int -eq $(version2int "12.1") ]; then
-        ARCHES=(      50 52 53 60 61 62 70 72 75 80 86 87 89 90 90a)
-    elif [ $cuda_compiler_version_int -eq $(version2int "12.2") ]; then
-        ARCHES=(      50 52 53 60 61 62 70 72 75 80 86 87 89 90 90a)
-    elif [ $cuda_compiler_version_int -eq $(version2int "12.3") ]; then
-        ARCHES=(      50 52 53 60 61 62 70 72 75 80 86 87 89 90 90a)
+    if   [ $cuda_compiler_version_int -ge $(version2int "12.0") ]; then # 2022-12
+        ARCHES=(               50 52 53 60 61 62 70 72 75 80 86 87 89 90 90a)
+    elif [ $cuda_compiler_version_int -ge $(version2int "11.8") ]; then # 2022-10
+        ARCHES=(         35 37 50 52 53 60 61 62 70 72 75 80 86 87 89 90)
+    elif [ $cuda_compiler_version_int -ge $(version2int "11.5") ]; then # 2021-10
+        ARCHES=(         35 37 50 52 53 60 61 62 70 72 75 80 86 87)
+    elif [ $cuda_compiler_version_int -ge $(version2int "11.2") ]; then # 2020-12
+        ARCHES=(         35    50    53 60 61 62 70 72 75 80 86)
+    elif [ $cuda_compiler_version_int -ge $(version2int "11.0") ]; then # 2020-06
+        ARCHES=(         35    50    53 60 61 62 70 72 75)
+    elif [ $cuda_compiler_version_int -ge $(version2int "10.0") ]; then # 2018-09
+        ARCHES=(   30 32 35    50 52 53 60 61 62 70 72 75)
+    elif [ $cuda_compiler_version_int -ge $(version2int "9.0") ]; then # 2017-09
+        ARCHES=(   30 32 35    50 52 53 60 61 62 70)
+    elif [ $cuda_compiler_version_int -ge $(version2int "8.0") ]; then # 2016-09
+        ARCHES=(20 30 32 35    50 52 53)
     fi
 
     LATEST_ARCH="${ARCHES[-1]}"
