@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/richard-burhans/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ddc685b0835096009ae4d9ec36c3bd740b4527c70462bf0197dd8283dd2258d1
+  sha256: 2c04c662015eb7846a0f1e3a817169ed31d218338296840e3989cbb19f602e7e
 
 build:
   number: 0
