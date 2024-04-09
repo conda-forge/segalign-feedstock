@@ -1,5 +1,5 @@
 {% set name = "SegAlign" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.2.1" %}
 {% set tbb_version = '2020.2.*' %}
 
 package:
@@ -7,17 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/gsneha26/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4f1892d0a08acf98b40608a2938cab984c225362df7a4c28c8347f2f38071abb
-  patches:
-    - patches/d1a73a0c9169d5517c9316d9bdc68fd52f63e885.patch
-    - patches/CMakeLists.txt.patch
-    - patches/common__seed_pos_table.cu.patch
-    - patches/repeat_masker_src__seed_filter.cu.patch
-    - patches/src__seed_filter.cu.patch
+  url: https://github.com/richard-burhans/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 2c04c662015eb7846a0f1e3a817169ed31d218338296840e3989cbb19f602e7e
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
 
 requirements:
