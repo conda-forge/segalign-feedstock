@@ -1,5 +1,5 @@
 {% set name = "SegAlign" %}
-{% set version = "0.1.2.1" %}
+{% set version = "0.1.2.2" %}
 {% set tbb_version = '2020.2.*' %}
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/richard-burhans/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 2c04c662015eb7846a0f1e3a817169ed31d218338296840e3989cbb19f602e7e
+  sha256: 93923fdef6316f0623ef9a42ab8a903048e5354e5502c7f0cf7e86664aa23ee0
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
 
 requirements:
@@ -28,11 +28,14 @@ requirements:
     - tbb-devel {{ tbb_version }}
     - zlib
   run:
+    - bash
     - coreutils
     - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version != "None"]
+    - gawk
     - grep
     - sed
     - tbb-devel {{ tbb_version }}
+    - time
 
 test:
   commands:
