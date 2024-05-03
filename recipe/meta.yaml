@@ -11,7 +11,7 @@ source:
   sha256: 2c04c662015eb7846a0f1e3a817169ed31d218338296840e3989cbb19f602e7e
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
 
 requirements:
