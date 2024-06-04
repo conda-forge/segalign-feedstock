@@ -1,6 +1,6 @@
 {% set name = "SegAlign" %}
 {% set version = "0.1.2.3" %}
-{% set tbb_version = '2020.2.*' %}
+{% set tbb_version = "2020.2.*" %}
 
 package:
   name: {{ name|lower }}
@@ -12,12 +12,12 @@ source:
 
 build:
   number: 0
-  skip: True  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
+  skip: true  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [cuda_compiler_version != "None"]
     - cmake
