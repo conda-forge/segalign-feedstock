@@ -1,6 +1,6 @@
 {% set name = "SegAlign" %}
-{% set version = "0.1.2.2" %}
-{% set tbb_version = '2020.2.*' %}
+{% set version = "0.1.2.3" %}
+{% set tbb_version = "2020.2.*" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://github.com/richard-burhans/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 93923fdef6316f0623ef9a42ab8a903048e5354e5502c7f0cf7e86664aa23ee0
+  sha256: 7d82df82d12f8739c7d94a07323720d34077d463583a035180afb9bb9c48a86a
 
 build:
   number: 0
-  skip: True  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
+  skip: true  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
 
 requirements:
   build:
