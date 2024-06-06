@@ -10,9 +10,10 @@ source:
   url: https://github.com/richard-burhans/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
   sha256: ebe39b1e2e2e47edac128003439d7459979a601f1f7a5078326f6db3a443186c
 
+
 build:
   number: 0
-  skip: True  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
+  skip: true  # [win or cuda_compiler_version is undefined or cuda_compiler_version == "None"]
 
 requirements:
   build:
