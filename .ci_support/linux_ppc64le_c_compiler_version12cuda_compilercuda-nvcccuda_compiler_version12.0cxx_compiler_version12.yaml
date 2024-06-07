@@ -25,7 +25,7 @@ docker_image:
 libboost_devel:
 - '1.84'
 target_platform:
-- linux-64
+- linux-ppc64le
 tbb:
 - '2021'
 zip_keys:
