@@ -26,8 +26,6 @@ libboost_devel:
 - '1.84'
 target_platform:
 - linux-64
-tbb:
-- '2021'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
@@ -37,4 +35,4 @@ zip_keys:
   - cuda_compiler_version
   - docker_image
 zlib:
-- '1.2'
+- '1'
