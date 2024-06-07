@@ -1,6 +1,6 @@
 {% set name = "SegAlign" %}
-{% set version = "0.1.2.4" %}
-{% set tbb_version = "2020.2.*" %}
+{% set version = "0.1.2.6" %}
+{% set segalign_tbb_version = "2020.2.*" %}
 
 package:
   name: {{ name|lower }}
@@ -8,8 +8,7 @@ package:
 
 source:
   url: https://github.com/richard-burhans/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ebe39b1e2e2e47edac128003439d7459979a601f1f7a5078326f6db3a443186c
-
+  sha256: cb80ce5bfa1e7b3d909364d384a60343d901984201016e666102615c67093c2e
 
 build:
   number: 0
@@ -20,22 +19,22 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
-    - {{ compiler('cuda') }}  # [cuda_compiler_version != "None"]
+    - {{ compiler('cuda') }}
     - cmake
     - make
   host:
-    - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version != "None"]
+    - cuda-version {{ cuda_compiler_version }}
     - libboost-devel
-    - tbb-devel {{ tbb_version }}
+    - tbb-devel {{ segalign_tbb_version }}
     - zlib
   run:
     - bash
     - coreutils
-    - cuda-version {{ cuda_compiler_version }}  # [cuda_compiler_version != "None"]
+    - cuda-version {{ cuda_compiler_version }}
     - gawk
     - grep
     - sed
-    - tbb-devel {{ tbb_version }}
+    - tbb-devel {{ segalign_tbb_version }}
     - time
 
 test:
@@ -58,7 +57,3 @@ about:
 extra:
   recipe-maintainers:
     - richard-burhans
-    # need to ask first
-    #- gsneha26     Sneha D. Goenka
-    #- yatisht      Yatish Turakhia
-    #- glennhickey  Glenn Hickey
