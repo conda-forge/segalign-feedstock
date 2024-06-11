@@ -1,5 +1,5 @@
 {% set name = "SegAlign" %}
-{% set version = "0.1.2.6" %}
+{% set version = "0.1.2.7" %}
 {% set segalign_tbb_version = "2020.2.*" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/richard-burhans/SegAlign/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: cb80ce5bfa1e7b3d909364d384a60343d901984201016e666102615c67093c2e
+  sha256: f4b487e17a43c26182511f0beb38421feab8dd915856439599c20f192c721137
 
 build:
   number: 0
