@@ -1,10 +1,10 @@
-c_compiler_version:         # [linux]
-  - 12                      # [(cuda_compiler_version or "").startswith("12")]
-  - 11                      # [(cuda_compiler_version or "").startswith("11")]
+c_compiler_version:     # [linux]
+  - 12                  # [(cuda_compiler_version or "").startswith("12")]
+  - 11                  # [(cuda_compiler_version or "").startswith("11")]
 
-cxx_compiler_version:       # [linux]
-  - 12                      # [(cuda_compiler_version or "").startswith("12")]
-  - 11                      # [(cuda_compiler_version or "").startswith("11")]
+cxx_compiler_version:   # [linux]
+  - 12                  # [(cuda_compiler_version or "").startswith("12")]
+  - 11                  # [(cuda_compiler_version or "").startswith("11")]
 
 cuda_compiler_version:
   - 12.5
