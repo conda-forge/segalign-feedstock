@@ -41,6 +41,13 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/segalign-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version11c_stdlib_version2.17cuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>linux_64_c_compiler_version12c_stdlib_version2.12cuda_compilerNonecuda_compiler_version12.5cxx_compiler_version12</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=21488&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/segalign-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_c_compiler_version12c_stdlib_version2.12cuda_compilerNonecuda_compiler_version12.5cxx_compiler_version12" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
