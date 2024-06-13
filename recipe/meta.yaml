@@ -23,7 +23,7 @@ requirements:
     - cmake
     - make
   host:
-    - cuda-version {{ segalign_cuda_version }}
+    - cuda-version {{ cuda_compiler_version }}
     - libboost-devel
     - tbb-devel {{ segalign_tbb_version }}
     - zlib
