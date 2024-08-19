@@ -177,5 +177,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@galaxyproject/segalign](https://github.com/orgs/galaxyproject/teams/segalign/)
 * [@richard-burhans](https://github.com/richard-burhans/)
 
