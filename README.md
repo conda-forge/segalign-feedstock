@@ -3,15 +3,15 @@ About segalign-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/segalign-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/gsneha26/SegAlign
+Home: https://github.com/galaxyproject/SegAlign
 
 Package license: MIT
 
 Summary: SegAlign: A Scalable GPU-Based Whole Genome Aligner
 
-Development: https://github.com/gsneha26/SegAlign
+Development: https://github.com/galaxyproject/SegAlign
 
-Documentation: https://github.com/gsneha26/SegAlign/blob/main/README.md
+Documentation: https://github.com/galaxyproject/SegAlign/blob/main/README.md
 
 SegAlign is a Scalable GPU System for Pairwise Whole Genome
 Alignments based on LASTZ's seed-filter-extend paradigm.
@@ -177,5 +177,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@galaxyproject/segalign](https://github.com/orgs/galaxyproject/teams/segalign/)
 * [@richard-burhans](https://github.com/richard-burhans/)
 
